@@ -5,6 +5,7 @@ def ask_model(model_name: str, prompt: str) -> None:
         model=model_name,
         messages=[{"role": "user", "content": prompt}],
     )
+    
     print(response.message.content)
 
 print(
