@@ -1,6 +1,5 @@
 from ollama import chat
 
-
 def ask_model(model_name: str, prompt: str) -> None:
     response = chat(
         model=model_name,
@@ -12,6 +11,7 @@ print(
     "Choose a model group: /code, /reasoning, /math, /Mistral "
     "(or press Enter for default llama3.3)"
 )
+
 model_choice = input("> ").strip()
 print("Powered by Ollama")
 prompt = input("Ask your question: ").strip()
@@ -78,6 +78,7 @@ elif model_choice == "/Mistral":
     }
 
     selected = mistral_models.get(mistral_choice)
+    
     if selected:
         ask_model(selected, prompt)
     else:
