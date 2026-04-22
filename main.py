@@ -8,7 +8,6 @@ def ask_model(model_name: str, prompt: str) -> None:
     )
     print(response.message.content)
 
-
 print(
     "Choose a model group: /code, /reasoning, /math, /Mistral "
     "(or press Enter for default llama3.3)"
